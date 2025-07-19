@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "Extension",
+  "description": "This is my description.",
+  "version": "1.0.0",
+  "action": {
+    "default_title": "Extension",
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "16": "public/icon.png",
+      "32": "public/icon.png",
+      "48": "public/icon.png",
+      "128": "public/icon.png"
+    }
+  },
+  "icons": {
+    "16": "public/icon.png",
+    "32": "public/icon.png",
+    "48": "public/icon.png",
+    "128": "public/icon.png"
+  },
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dist/content.js",
+        "html/css/style.css",
+        "icon.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "dist/content.js"
+      ],
+      "css": [
+        "html/css/style.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "options_page": "html/options.html"
+}

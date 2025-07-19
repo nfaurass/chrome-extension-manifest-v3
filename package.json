@@ -1,0 +1,28 @@
+{
+  "name": "chrome-extension-manifest-v3",
+  "description": "",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "w": "webpack --watch",
+    "clean": "rm -rf dist",
+    "c": "rm -rf dist",
+    "wc": "npm run clean && npm run watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nfaurass/chrome-extension-manifest-v3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nfaurass/chrome-extension-manifest-v3/issues"
+  },
+  "homepage": "https://github.com/nfaurass/chrome-extension-manifest-v3#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.1.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.100.2",
+    "webpack-cli": "^6.0.1"
+  }
+}
